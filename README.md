@@ -1,6 +1,6 @@
-# 💼 Jacqueline's Developer Portfolio
+# 💼 The_DevFolio
 
-A modern, responsive web developer portfolio built with **React**, **TypeScript**, and **TailwindCSS**, inspired by a professional Figma design. This portfolio highlights my projects, blogs, and skills as a fullstack developer based in Rwanda.
+Personal Porfolio, Shoecasing my skills and Work...
 
 ## Directories
 
