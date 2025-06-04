@@ -32,9 +32,7 @@ Coming soon — screenshots or live demo.
 1. Clone this repository
 
 ```bash
-git clone https://github.com/your-username/portfolio-website.git
-cd portfolio-website
-
+git clone https://github.com/JacquelineTuyisenge/the_devfolio.git
 ```
 2. Navigate into Directories
 
@@ -44,4 +42,4 @@ cd portfolio-website
    npm run dev
    ```
 
-Made with ❤️ By Jacky!
+Made with  ❤️  By Jacky!
