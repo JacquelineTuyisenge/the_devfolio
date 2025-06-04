@@ -1,0 +1,5 @@
+{
+  "development": { "url": "postgresql://postgres:T2210200jacky!@localhost:5433/Portfolio", "dialect": "postgres" },
+  "test":        { "url": "TEST_DB",      "dialect": "postgres" },
+  "production":  { "url": "DB_PROD",      "dialect": "postgres" }
+}
