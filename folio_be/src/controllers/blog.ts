@@ -80,7 +80,10 @@ export const updateBlog = async (req: Request, res: Response) => {
       blog.readTime = `${Math.ceil(content.split(/\s+/).length / 200)} min`;
   
       await blog.save();
-      res.json(blog);
+      res.status(201).json({
+        message: 'Blog updated successfully',
+        blog: blog,
+      });
     } catch (err) {
       res.status(500).json({ error: 'Failed to update blog' });
     }

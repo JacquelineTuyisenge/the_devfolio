@@ -1,6 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import blogRoutes from './routes/blog';
+import adminRoutes from './routes/admin';
 import cors from 'cors';
 import { connectDB } from './config/db';
 import './models'; // Ensure models are initialized
@@ -17,6 +18,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api/blogs', blogRoutes);
+app.use('/api/admin', adminRoutes);
 
 
 const PORT = process.env.PORT || 5000;
