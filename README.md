@@ -1,6 +1,6 @@
 # 💼 The_DevFolio
 
-Personal Porfolio, Shoecasing my skills and Work...
+Personal Porfolio, Showcasing my skills and Work...
 
 ## Directories
 
@@ -19,7 +19,7 @@ Personal Porfolio, Shoecasing my skills and Work...
 ## 🧰 Tech Stack
 
 - **Frontend**: React, TypeScript, TailwindCSS
-- **Design**: Figma (custom template)
+- **Design**: Figma (https://www.figma.com/design/Cpd0HIj215RKu6JbXzezcw/Web-Developer-Portfolio-Website-Template--Community---Copy-?node-id=2-3&p=f&t=3Qn8x2uCqtdmxU9y-0)
 - **Deployment**: Vercel (or Netlify)
 
 ## 📸 Preview
