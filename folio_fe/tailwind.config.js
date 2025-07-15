@@ -14,7 +14,7 @@ export default {
           interactive: '#D4D4D8',  // subtle hover or highlight
         },
         fontFamily: {
-          sans: ['Inter', 'sans-serif'],
+          sans: ['Poppins', 'sans-serif'],
         },
         borderRadius: {
           xl: '1rem',

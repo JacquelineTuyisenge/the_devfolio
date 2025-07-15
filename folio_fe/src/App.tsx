@@ -1,12 +1,16 @@
 import { Nav } from "./Nav";
+import { Footer } from "./Footer";
 import {
   MdEmail,
   MdLocationPin,
   MdBusinessCenter
 } from "react-icons/md";
+import { Link } from "react-router-dom";
 import { FaLinkedin } from "react-icons/fa";
 import profilePic from "../src/assets/Profile.jpeg";
 import { projects } from "./data/projects";
+import { blogs } from "./data/blogs";
+
 
 function App() {
   return (
@@ -14,7 +18,7 @@ function App() {
       <Nav />
 
       {/* Hero + Profile Section */}
-      <section className="bg-background text-text py-20 px-4 md:px-6">
+      <section className="bg-background text-text py-20 px-4 md:px-6 border-b border-xmuted">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-12">
           {/* Profile Card */}
           <div>
@@ -25,14 +29,11 @@ function App() {
             />
             <div className="shadow-card rounded-xl p-6">
               <div className="text-center">
-                <p className="text-white text-sm mt-1">Jacqueline Tuyisenge</p>
+                <p className="text-white text-lg mt-1">Jacqueline Tuyisenge</p>
               </div>
 
               {/* Contact Info */}
               <div className="mt-4 space-y-2 text-sm text-muted">
-                <p className="flex items-center gap-2">
-                  <MdEmail className="text-interactive" /> tuyisenge@gmail.com
-                </p>
                 <p className="flex items-center gap-2">
                   <MdLocationPin className="text-interactive" /> Rwanda
                 </p>
@@ -78,15 +79,17 @@ function App() {
               <code className="text-muted text-sm">&lt;h1&gt;</code>
               <h1 className="text-2xl md:text-3xl font-bold mt-2 leading-tight">
                 <span className="text-interactive animate-pulse">Hi</span>,<br />
-                I’m Jacqueline, a full-stack developer.
               </h1>
+                <p className="text-base text-muted max-w-xl mt-2">
+                   I am a software engineer, and i specialize in full-stack development.
+                </p>
               <code className="text-muted text-sm">&lt;/h1&gt;</code>
             </div>
 
             <div>
               <code className="text-muted text-sm">&lt;p&gt;</code>
               <p className="text-base text-muted max-w-xl mt-2">
-                I help businesses grow by crafting seamless web experiences. If you’re looking for a developer who gets things done...
+                If you’re looking for a developer who gets things done...
               </p>
               <code className="text-muted text-sm">&lt;/p&gt;</code>
             </div>
@@ -100,10 +103,8 @@ function App() {
       <section className="bg-background text-text py-20 px-4 md:px-6">
         <div className="max-w-6xl mx-auto">
           {/* Section Title with Line */}
-          <div className="flex items-center gap-4 mb-12">
-            <div className="flex-grow border-t border-border" />
-            <h2 className="text-base font-bold text-muted uppercase tracking-wide">Projects</h2>
-            <div className="flex-grow border-t border-border" />
+          <div className="flex items-center justify-center mb-8">
+            <h2 className="text-lg text-center align-center font-bold text-muted">Projects</h2>
           </div>
 
           {/* Projects Grid */}
@@ -141,6 +142,54 @@ function App() {
 
         </div>
       </section>
+
+      {/* Blogs Section */}
+      <section className="bg-background text-text py-20 px-4 md:px-6">
+        <div className="max-w-6xl mx-auto">
+          {/* Section Title with Line */}
+          <div className="flex items-center justify-center mb-8">
+            <h2 className="text-lg text-center align-center font-bold text-muted">Blogs</h2>
+          </div>
+
+          {/* Blog Cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {blogs.slice(0, 3).map((blog) => (
+              <div key={blog.id} className="rounded-xl overflow-hidden bg-background shadow-card hover:shadow-lg transition duration-300">
+                <Link to={`/blogs/${blog.id}`} key={blog.id} className="rounded-xl overflow-hidden bg-background transition duration-300">
+                <img
+                  src={typeof blog.coverImage === "string" ? blog.coverImage : ""}
+                  alt={blog.title}
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-4 space-y-2">
+                  <p className="text-sm text-muted">{new Date(blog.date).toDateString()}</p>
+                  <h3 className="text-lg font-semibold">{blog.title}</h3>
+                  <p className="text-sm text-muted">{blog.subtitle}</p>
+                  <div className="flex gap-2 flex-wrap mt-2">
+                    {blog.tags.slice(0, 2).map((tag) => (
+                      <span key={tag} className="text-xs bg-interactive text-background px-2 py-1 rounded-full">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                </Link>
+              </div>
+            ))}
+          </div>
+
+          {/* View All Blogs Button */}
+          <div className="mt-12 text-center">
+            <a
+              href="/blogs"
+              className="inline-block border border-interactive text-background px-6 py-2 rounded-xl font-medium bg-interactive hover:bg-foreground transition"
+            >
+              View More Blogs →
+            </a>
+          </div>
+        </div>
+      </section>
+      <Footer />
     </>
   );
 }
