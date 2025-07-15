@@ -1,7 +1,6 @@
 import { Nav } from "./Nav";
 import { Footer } from "./Footer";
 import {
-  MdEmail,
   MdLocationPin,
   MdBusinessCenter
 } from "react-icons/md";

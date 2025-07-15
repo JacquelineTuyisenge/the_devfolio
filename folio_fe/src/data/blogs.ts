@@ -1,7 +1,6 @@
 import foodImage from "../assets/Food.jpg";
 import carImage from "../assets/car.jpg";
 import portpicImage from "../assets/Portpic.jpg";
-import notesImage from "../assets/notes.jpg";
 import type { Blog } from "../data/types";
 
 export const blogs: Blog[] = [
