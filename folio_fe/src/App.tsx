@@ -65,9 +65,14 @@ function App() {
 
               {/* CV Button */}
               <div className="mt-6 text-center">
-                <button className="border border-interactive text-background px-6 py-2 rounded-xl font-medium bg-interactive hover:bg-foreground transition">
+                <a
+                  className="mt-6 text-center border border-interactive text-background px-6 py-2 rounded-xl font-medium bg-interactive hover:bg-foreground transition btn content-download button-main button-scheme"
+                  href="../public/cv.pdf"
+                  download="Jacky's CV"
+                >
                   Download CV
-                </button>
+               </a>
+
               </div>
             </div>
           </div>
