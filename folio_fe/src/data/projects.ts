@@ -4,7 +4,7 @@ import foodImage from "../assets/Food.jpg";
 import carImage from "../assets/car.jpg";
 import portpicImage from "../assets/Portpic.jpg";
 import shopImage from "../assets/shop.jpg";
-import notesImage from "../assets/notes.jpg";
+import budgetImage from "../assets/budget.jpg";
 import jobImage from "../assets/job.jpg";
 
 export const projects = [
@@ -37,14 +37,14 @@ export const projects = [
       github: "https://github.com/jacqueline/shopify-clone",
     },
     {
-      name: "NoteKeep",
-      description: "Simple fullstack note-taking app with MongoDB",
-      image: notesImage,
-      live: "https://notekeep.vercel.app",
-      github: "https://github.com/jacqueline/notekeep",
+      name: "Budget Tracker",
+      description: "Spend Responsibly, Track Your Budget",
+      image: budgetImage,
+      live: "https://budget-j-manager.netlify.app/",
+      github: "https://github.com/JacquelineTuyisenge/Budget-Manager",
     },
     {
-      name: "JobTrackr",
+      name: "JobTracker",
       description: "Job application tracker with filter & status",
       image: jobImage,
       live: "",
